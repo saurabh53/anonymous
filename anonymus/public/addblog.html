@@ -1,0 +1,27 @@
+
+
+	 <form>
+		<div class="form-group">
+			<label for="title">Title:</label>
+			<input type="text" class="form-control" id="title" ng-model="title" placeholder="Enter Title" required>
+		</div>
+		<div class="form-group">
+			<label for="category">Category:</label>
+			<!-- <input type="text" class="form-control" id="category"  ng-model="category" placeholder="Enter Category"> -->
+			<div class="input-group-btn">
+				<select class="form-control btn btn-default" ng-model="category" ng-options="x for x in categoryNames" required>
+
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="description">Description:</label>
+			<textarea class="form-control" rows="5" id="description" ng-model="description" required></textarea>
+		</div>
+		<button type="submit" class="btn btn-default" ng-disabled="myForm.$invalid" ng-click="doPost()">Post</button>
+ 	 </form>
+
+ 	 <div style="color: blue" ng-show="isPosted==true">
+ 	 	Successfully Posted....
+ 	 </div>
+

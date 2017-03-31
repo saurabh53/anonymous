@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script type="text/javascript" src="/JS/app.js"></script>
+	<title></title>
+	<style type="text/css">
+		.pages {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 4;
+			padding: 0;
+			overflow: auto;
+		}
+		.header-panel {
+    		background-color: #009587;
+    		height: 144px;
+    		position: relative;
+    		z-index: 3;
+		}
+		.menu {
+    		overflow: auto;
+    		padding: 0;
+		}
+
+		.menu ul {
+    		padding: 0;
+    		margin: 7px 0;
+		}
+		.menu ul li.active {
+			background-color: #dedede;
+			position: relative;
+		}
+		
+		.menu ul li {
+			list-style: none;
+			padding: 20px 0 20px 8px;
+			font-size: 1em;
+			font-weight: normal;
+			cursor: pointer;
+		}
+		
+		.menu, .menu * {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		user-select: none;
+		}
+		
+		.withripple {
+			position: relative;
+		}
+
+		.page.active {
+
+			transform: translateY(0px);
+			transition: all 0.3s ease-out;
+			display: block;
+			opacity: 1;
+		}
+
+
+		.page {
+			padding: 19px;
+			margin-bottom: 20px;
+			-webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 2px;
+			border: 0;
+			transform: translateY(1080px);
+			transition: transform 0 linear;
+			display: none;
+			opacity: 0;
+			font-size: 1em;
+			margin-left: 1em;
+		}
+		* {
+    		box-sizing: border-box;
+		}
+
+		.pages > div {
+			padding: 0 5px;
+			padding-top: 64px;
+			margin: 0;
+		}
+      .summary{
+      	min-height: 20px;
+      	max-height: 200px;
+      	padding:5px;
+        text-overflow: hidden;
+         text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		background-color: #dbdbdb;
+		border-radius: 5px;
+      }
+
+      .between{
+      	border: 1px solid #009587;
+      	
+      }
+
+	</style>
+</head>
+<body ng-app="blogApp">
+
+	<div class="header-panel">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-3">
+					<img src="../images/thinkngle.png" class="col-xs-12" style="margin-top: 25px">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid main" style="height:774px;">
+		<div class="row">
+			<nav class="col-xs-4 menu">
+				
+				<ul>
+        			<li class="withripple" data-target="#about"><a href="#/">Home</a></li>
+        			<li class="withripple" data-target="#getting-started"><a href="#/blog/food">Food</a></li>
+        			<li class="withripple"><a href="#/blog/health">Health</a></li>
+        			<li class="withripple"><a href="#/blog/education">Education</a></li>
+        			<li class="withripple"><a href="#/blog/personelexperience">Personel Experience</a></li>
+        			<li class="withripple"><a href="#/blog/misc">Miscellaneous</a></li>
+
+      			</ul>
+			</nav>
+
+			<div class="pages col-xs-9">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="well page active"  id="about">
+
+							<div ui-view ></div>
+							<!-- <h1 class="header">Material Design for Bootstrap</h1>
+							
+							<p>Material Design for Bootstrap is a theme for Bootstrap 3 which lets you use the new
+              					<a href="http://www.google.com/design/spec/material-design/" target="_blank">Google Material Design</a> in your favorite front-end framework.
+            				</p>
+
+            				<p>If you like this project you can support me by donating something on Gratipay, starring this repository, or
+              					<a href="https://github.com/FezVrasta/bootstrap-material-design/issues">reporting bugs and ideas</a>.
+              				</p>
+
+              				<p>Read more about Material Design for Bootstrap at the
+              					<a href="https://github.com/FezVrasta/bootstrap-material-design">Github page</a>.
+              				</p>
+
+              				<br>
+              				<p>If you want support the development of this project please consider donate something:</p> -->
+
+              				
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

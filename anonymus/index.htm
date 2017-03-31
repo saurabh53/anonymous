@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+  <script type="text/javascript" src="/JS/app.js"></script>
+
+    <style>
+      html, body, #fullheight {
+        min-height: 100vh !important;
+       height: 100vh;
+      }
+
+      .center{
+        margin:0 auto;
+      }
+      .summary{
+        width:100px;
+        text-overflow: hidden;
+      }
+    </style>
+
+  </head>
+  <body style="height:100%" ng-app="blogApp">
+  <!--     <div class="row">
+        <div class="col-sm-12 well">
+          header
+        </div>
+      </div> -->
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Website Name</a>
+          </div>
+              <ul class="nav navbar-nav">
+                  <li><a href="#/">Home</a></li>
+                  <li><a href="#/blog/food">Food</a></li>
+                  <li><a href="#/blog/health">Health</a></li>
+                  <li><a href="#/blog/education">Education</a></li>
+                  <li><a href="#/blog/personelexperience">Personel Experience</a></li>
+                  <li><a href="#/blog/misc">Miscellaneous</a></li>
+              </ul>
+        </div>
+        
+      </nav>
+
+      <div class="container center">
+          <div class="row">
+
+            <div ui-view>
+
+          </div>
+
+      </div>
+        
+      </div>
+
+
+
+  </body>
+</html>
